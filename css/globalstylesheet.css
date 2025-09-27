@@ -1,0 +1,238 @@
+/* Global Style Sheet - used by everyone */
+* {
+    box-sizing: border-box; /* include padding/border in width & height */
+    font-family: Arial, sans-serif; /* consistent font */
+}
+
+html {
+    font-size: 16px; /* base size for rem units */
+    scroll-padding-top: 7.5rem; /* offset for fixed header on anchor links */
+}
+
+body {
+    background-color: #e8f5e9; /* light green eco background */
+    margin: 0; /* remove default margin */
+    padding: 0; /* remove default padding */
+    color: #1b3a2a; /* dark green text */
+    min-height: 100vh; /* full viewport height */
+    display: flex; /* for vertical layout */
+    flex-direction: column; /* stack children vertically */
+    scroll-behavior: smooth; /* smooth scrolling for anchor links */
+}
+
+/* Header */
+header {
+    position: fixed; /* stays at the top */
+    top: 0;
+    left: 0;
+    width: 100%; /* full width */
+    min-height: 6.25rem; /* ~100px height */
+    z-index: 999; /* on top of all elements */
+    display: flex; /* flex layout */
+    justify-content: space-between; /* space between logo and nav */
+    align-items: center; /* vertically center items */
+    padding: 0 5%; /* horizontal spacing */
+    background: rgba(0, 2, 45, 0.8); /* semi-transparent dark blue */
+    box-shadow: 0 0.125rem 0.375rem rgba(0, 0, 0, 0.15); /* subtle shadow */
+    border-bottom-right-radius: 1.5625rem; /* rounded corners */
+    border-bottom-left-radius: 1.5625rem;
+    overflow: hidden; /* clip any overflow */
+}
+
+.logo {
+    width: auto;
+    max-height: 5rem; /* limit logo height */
+}
+
+.logo:hover {
+    transform: rotateY(360deg); /* spin animation */
+    transition: transform 2.3s ease; /* smooth spin */
+}
+
+.left-header {
+    display: flex; /* arrange logo and text side-by-side */
+    align-items: center;
+    gap: 1rem; /* spacing between logo and text */
+}
+
+.left-header h1 {
+    font-size: 2.5rem; /* large heading */
+    display: flex;
+    align-items: center;
+}
+
+.ener {
+    color: #1a4d8f; /* blue part of logo text */
+}
+
+.leaf {
+    color: #006400; /* green part of logo text */
+}
+
+.navlist {
+    display: flex; /* horizontal list */
+    gap: 1.25rem; /* spacing between links */
+    list-style: none; /* remove bullets */
+    margin: 0;
+    padding: 0;
+}
+
+.navlist a {
+    text-decoration: none; /* remove underline */
+    color: GhostWhite; /* light text color */
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease; /* smooth hover color */
+}
+
+.navlist a:hover {
+    color: #3C7043; /* green hover effect */
+}
+
+.navlist a.active {
+  color: #3C7043; /* active page indicator */
+  font-weight: bold;
+}
+
+/* Main content area */
+main {
+    flex: 1; /* take up remaining space */
+    width: 90%;
+    max-width: 100%;
+    margin: 0 auto; /* center */
+    padding-top: 7.5rem; /* space for fixed header */
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #3C7043; /* green footer */
+  color: #ffffff !important; /* force white text */
+  padding: 2rem 1rem; /* space inside */
+  font-size: 0.9rem;
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 90px; /* gap above footer */
+  position: relative;
+  z-index: 101; /* stay above background */
+}
+
+.footer-container {
+  max-width: 1200px; /* limit width */
+  margin: 0 auto; /* center content */
+  padding: 0 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  color: inherit; /* use parent color */
+}
+
+.footer-content {
+  display: flex; /* row layout */
+  flex-wrap: wrap; /* wrap on smaller screens */
+  justify-content: space-between; /* spread sections */
+  gap: 2rem; /* spacing between sections */
+  margin-bottom: 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+  color: inherit;
+  text-align: left !important; /* force left alignment */
+}
+
+.footer-logo .logo-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: inherit;
+}
+
+.logo-text {
+  font-size: 2.3rem;
+  font-weight: bold;
+  color: inherit;
+}
+
+.footer-logo {
+  flex: 1 1 220px; /* responsive basis */
+  text-align: center;
+  color: inherit;
+}
+
+.footer-logo img {
+  max-width: 90px; /* image size limit */
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.footer-logo .tagline {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: #d0f0d8; /* soft light green */
+}
+
+.footer-section {
+  flex: 1 1 220px;
+  color: inherit;
+  text-align: left !important;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  color: #BCEAC6 !important; /* light green */
+  margin-bottom: 0.5rem;
+  text-align: left !important;
+}
+
+.footer-section p {
+  line-height: 1.6;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: #ffffff !important; /* force white */
+  font-size: 0.85rem;
+  text-align: left !important;
+}
+
+.footer-section a {
+  color: #ffffff !important; /* white link */
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.3s ease;
+  text-align: left !important;
+}
+
+.footer-section a:hover {
+  color: #BCEAC6 !important; /* light green on hover */
+}
+
+.footer-bottom {
+  border-top: 1px solid #ffffff30; /* subtle top line */
+  padding-top: 0.3rem;
+  text-align: center;
+  font-size: 0.75rem !important;
+  color: #e0f5e9 !important; /* pale green */
+  box-sizing: border-box;
+}
+
+.footer-bottom p {
+  margin: 5px 2px;
+  padding: 0;
+  color: inherit;
+  font-size: 0.8rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column; /* stack sections vertically */
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section {
+    flex: 1 1 100%; /* full width */
+  }
+}
+
+/* Scroll anchor offset fix */
+[id] {
+    scroll-margin-top: 7.5rem; /* adjust scroll position for fixed header */
+}

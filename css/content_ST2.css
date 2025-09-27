@@ -1,0 +1,289 @@
+/* Reset and base */
+
+body {
+  margin: 0; /* remove default spacing */
+  padding: 0; /* remove default spacing */
+  flex-direction: column; /* stack elements */
+  background: linear-gradient(225deg, #3C7043, #BCEAC6); /* green background */
+  color: #1b3a2a; /* dark green text */
+  min-height: 100vh; /* full screen height */
+  display: flex; /* make body a flex container */
+}
+
+a {
+  color: #1e5a34; /* link color */
+  text-decoration: none; /* remove underline */
+  transition: color 0.3s ease; /* smooth hover effect */
+}
+a:hover,
+a:focus {
+  color: #0f3a1b; /* darker on hover/focus */
+  outline: none; /* no outline */
+  text-decoration: none; /* stay clean */
+}
+
+/* Sidebar styles */
+
+nav.sidebar {
+  position: fixed; /* stick to side */
+  top: 100px; /* below header */
+  left: 0;
+  width: 260px; /* sidebar width */
+  height: 100vh; /* full height */
+  background: #3C7043; /* green bg */
+  color: white;
+  padding: 30px 20px; /* space inside */
+  overflow-y: auto; /* scroll if needed */
+  box-shadow: 5px 0 10px rgba(0,0,0,0.3); /* right shadow */
+  font-weight: 600; /* bold text */
+}
+nav.sidebar h2 {
+  margin-top: 0;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #0b3e1d; /* underline */
+  padding-bottom: 10px;
+  letter-spacing: 0.03em; /* slightly spaced */
+}
+nav.sidebar ul {
+  list-style: none; /* remove bullets */
+  padding: 0;
+  margin: 0;
+}
+nav.sidebar ul li {
+  margin-bottom: 20px; /* space between links */
+}
+nav.sidebar ul li a {
+  color: #BCEAC6; /* light green text */
+  font-size: 1.1rem;
+  display: block;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background-color 0.25s ease, color 0.25s ease; /* smooth hover */
+}
+nav.sidebar ul li a.active,
+nav.sidebar ul li a:hover,
+nav.sidebar ul li a:focus {
+  background: #2b5a2e; /* dark green */
+  color: white;
+  outline: none;
+  box-shadow: 0 0 6px #2b5a2e99; /* glow */
+}
+
+/* Content container */
+main.content {
+  margin-left: 280px; /* avoid sidebar */
+  background: white;
+  border-radius: 14px;
+  padding: 40px 50px; /* space inside */
+  margin-top: 120px; /* below header */
+  box-shadow: 0 8px 25px rgb(0 0 0 / 0.1.5); /* shadow */
+  max-width: 900px;
+  flex-grow: 1; /* take up space */
+}
+main.content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 5px;
+  color: #3C7043;
+  font-weight: 700;
+}
+main.content h2 {
+  font-size: 2rem;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  color: #3C7043;
+  border-bottom: 3px solid #BCEAC6; /* underline */
+  padding-bottom: 8px;
+}
+main.content h3 {
+  font-size: 1.4rem;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  color: #2b5a2e;
+}
+p {
+  line-height: 1.65;
+  margin-bottom: 18px;
+  font-size: 1.05rem;
+  color: #2c4b34;
+}
+ul {
+  margin-left: 22px;
+  margin-bottom: 25px;
+  font-size: 1rem;
+  color: #2d573a;
+}
+ul li {
+  margin-bottom: 15px;
+}
+
+/* Figure & images */
+figure {
+  margin: 30px 0;
+  text-align: center; /* center content */
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgb(0 0 0 / 0.08); /* light shadow */
+  transition: transform 0.4s ease; /* hover zoom */
+  cursor: pointer;
+  padding-bottom: 10px;
+}
+figure:hover {
+  transform: scale(1.05); /* zoom in */
+  box-shadow: 0 10px 30px rgb(0 0 0 / 0.15); /* stronger shadow */
+}
+figure img {
+  max-width: 100%; /* responsive */
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+figcaption {
+  margin-top: 8px;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #7a8f7a;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 35px 0;
+  font-size: 1rem;
+  color: #2c4b34;
+}
+thead th {
+  background: linear-gradient(90deg, #3C7043, #BCEAC6); /* green header */
+  color: white;
+  padding: 14px 12px;
+  text-align: left;
+  font-weight: 700;
+}
+tbody tr:hover {
+  background-color: #e2f5e8; /* light green row hover */
+}
+th, td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #b3e0cb;
+}
+
+/* Stats grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(180px, 1fr)); /* flexible grid */
+  gap: 30px;
+  margin: 30px 0 50px 0;
+}
+.stat {
+  background: #e8f5e9;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgb(0 0 0 / 0.1);
+  text-align: center;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+.stat:hover {
+  background: #ccebd3;
+}
+.stat h3 {
+  margin: 0;
+  font-size: 2.4rem;
+  color: #3C7043;
+  font-weight: 700;
+}
+.stat p {
+  margin-top: 10px;
+  font-weight: 600;
+  color: #336e4e;
+}
+
+/* go top button */
+.top {
+  position: fixed;
+  bottom: 5%; /* from bottom of page */
+  right: 5%;  /* from right of page */
+}
+.top a {
+  padding: 10px 20px;
+  background-color: #09601e; /* dark green */
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.top a:hover {
+  background-color: #0056b3; /* dark blue hover */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* shadow */
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 22px 10px;
+  background: #3C7043;
+  color: #e5ffee;
+  font-size: 0.9rem;
+  margin-top: 60px;
+  user-select: none;
+}
+footer, a {
+  color: #e5ffee; /* footer links */
+}
+
+/* Responsive sidebar */
+@media (max-width: 900px) {
+  body {
+    flex-direction: column;
+  }
+  nav.sidebar {
+    position: relative; /* no fixed on small */
+    width: 100%;
+    height: auto;
+    padding: 20px 15px;
+    box-shadow: none;
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  nav.sidebar h2 {
+    display: none;
+  }
+  nav.sidebar ul {
+    display: flex;
+    gap: 20px;
+  }
+  nav.sidebar ul li {
+    margin: 0;
+  }
+  nav.sidebar ul li a {
+    padding: 10px 16px;
+    font-size: 1rem;
+    white-space: nowrap;
+    border-radius: 12px;
+  }
+  nav.sidebar ul li a.active,
+  nav.sidebar ul li a:hover,
+  nav.sidebar ul li a:focus {
+    box-shadow: none;
+  }
+  main.content {
+    margin: 20px 20px 60px 20px;
+    max-width: 100%;
+    border-radius: 12px;
+    padding: 25px 20px;
+  }
+}
+
+/* Section fade-in */
+section {
+  opacity: 0;
+  transform: translateY(50px) ; /* start lower */
+  transition: opacity 0.6s ease, transform 1.6s ease; /* fade + slide */
+}
+section.visible {
+  opacity: 1;
+  transform: translateY(0); /* show */
+}

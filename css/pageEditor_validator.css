@@ -1,0 +1,130 @@
+.navlist {
+	display: flex; /* Arrange navigation items in a row */
+	gap: 20px; /* Space between nav items */
+	list-style: none; /* Remove default list bullet points */
+}
+
+.navlist a {
+	text-decoration: none; /* Remove underline from links */
+	color: GhostWhite; /* Light text color for nav links */
+	font-weight: bold; /* Make nav text bold */
+	font-size:16px; /* Font size for nav items */
+	transition: color 0.3s; /* Smooth hover color transition */
+}
+
+.navlist a:hover { 
+    color: #3C7043; /* Change color on hover */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Set default font */
+    margin: 0; /* Remove default margin */
+    margin-top: 120px; /* Offset for fixed header or top space */
+	background-color:#c7eaca; /* Light green background */
+}
+
+main {
+    flex:3; /* Occupy more space in a flex container */
+    max-width: 100%; /* Full width */
+    margin: 0;
+    padding-top: 0; /* Prevent extra spacing at top of section */
+}
+
+.stud {
+	background-color: #3C7043; /* Dark green background */
+	padding: 30px; /* Space inside the container */
+	text-align: center; /* Center align text */
+	border-radius: 10px; /* Rounded corners */
+	margin: 0px;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Subtle shadow */
+}
+
+.stud h2 {
+	margin: 0;
+	font-size: 28px; /* Large heading size */
+	font-weight: bold; /* Bold heading */
+    color: white; /* White text */
+}
+
+.container {
+    display: flex; /* Use flexbox layout */
+    flex-direction: row-reverse; /* Reverse order: sidebar on left visually */
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px; /* Space around content */
+}
+
+aside {
+    flex: 1; /* Take up one part of available space */
+    background-color: #3C7043; /* Dark green background */
+    padding: 15px; /* Inner spacing */
+    border-radius: 5px; /* Rounded corners */
+    margin-right: 20px; /* Space between aside and main content */
+	color: GhostWhite; /* Light text color */
+}
+
+aside h3{
+    font-size: 20px; /* Section title size */
+    color: white; /* White heading */
+    margin-bottom: 25px;
+}
+
+aside a{
+    text-decoration : none; /* Remove underline */
+    color: #BCEAC6; /* Light green link color */
+	font-weight: bold;	
+	font-size:16px;
+	transition: color 0.3s; /* Smooth transition on hover */
+}
+
+aside a:hover { 
+    color: rgb(1, 26, 9); /* Hover color for sidebar links */
+    font-weight: bold;
+}
+
+aside li{
+    padding-bottom: 4px; /* Space between list items */
+}
+
+section {
+    margin-bottom: 20px; /* Space below each section */
+    padding: 15px; /* Inner padding */
+    border-radius: 5px; /* Rounded corners */
+    line-height:1.6;
+    font-size: 16px;
+    background-color: GhostWhite; /* White background for contrast */
+}
+
+section code {
+    font-family: monospace;
+}
+
+.top {
+    position: fixed; /* Stay in fixed position */
+    bottom: 5%; /* Position near bottom right */
+    right: 5%;
+}
+        
+.top a {
+    padding: 10px 20px; /* Adds padding for button-like feel */
+    background-color: #09601e; /* Button color */
+    color: white; /* Text color */
+    text-decoration: none; /* Removes underline */
+    border-radius: 20px; /* Rounds the corners */
+    font-size: 12px; /* Adjust font size */
+    font-weight: bold; /* Make the text stand out */
+}
+
+.top a:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow */
+}
+
+.ref li{
+    list-style: none; /* Remove bullet points */
+    padding-bottom: 9px; /* Space between references */
+}
+
+img{
+    width: 90%; /* Responsive image scaling */
+}

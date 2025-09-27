@@ -1,0 +1,132 @@
+body {
+    margin: 0; /* remove default margin */
+	padding: 0; /* remove default padding */
+}
+
+.video-container {
+	position: relative; /* allows positioning text/buttons inside */
+	width: 100%; /* full width */
+	height: auto; /* height auto based on content */
+	overflow: hidden; /* hides overflow like scrollbars or bleed */
+}
+
+.hp-video { 
+	width: 100%; /* full width */
+	height: auto; /* maintain aspect ratio */
+	display: block; /* remove inline gaps */
+	margin-bottom: 0; /* no space under video */
+	object-fit: cover; /* crops video to cover box nicely */
+}
+
+.video-text {
+    position: absolute; /* position over video */
+    top: 70%; /* slightly lower down */
+    left: 5%; /* close to left edge */
+    transform: translate(0, -50%); /* center vertically only */
+    color: #ffffff; /* white text */
+    font-size: 32px; /* big text */
+    font-weight: bold; /* bold text */
+    text-align: left; /* align to left */
+    text-shadow: 0 0 10px #4d574e, 0 0 20px #203045; /* glowing effect */
+    padding: 10px; /* space around text */
+    max-width: 90%; /* prevent overflow */
+    word-wrap: break-word; /* allow breaking lines */
+}
+
+.learn-more-btn {
+    position: absolute; /* positioned on video */
+    top: 85%; /* place lower than text */
+    left: 5%; /* aligned with text */
+    background-color: #348534; /* green bg */
+    color: #fff; /* white text */
+    padding: 10px 20px; /* space inside */
+    font-size: 16px; /* readable size */
+    font-weight: bold; /* bold text */
+    border: none; /* remove default border */
+    border-radius: 8px; /* round corners */
+    text-decoration: none; /* remove underline */
+    box-shadow: 0 4px 10px rgba(105, 103, 103, 0.4); /* soft shadow */
+    transition: background-color 0.3s ease; /* smooth hover */
+}
+
+.learn-more-btn:hover {
+    background-color: #2c6e2c; /* darker green on hover */
+}
+
+.mission {
+    padding: 20px 90px; /* padding around section */
+    border-radius: 10px; /* rounded box */
+}
+
+.mission, h1{
+	font-size: 1.9rem; /* big heading */
+	color:#348534; /* green heading */
+	text-align: center; /* center aligned */
+}
+
+.mission, p {
+	font-size: 1.05rem; /* readable paragraph */
+	color: #0a3814; /* dark green text */
+	line-height: 1.8; /* spacious lines */
+	text-align: center; /* center aligned */
+}
+
+/* ===== TILE (Card) Styles for Home Content Links ===== */
+.tiles-container {
+	display: flex; /* arrange tiles in row */
+	justify-content: center; /* center them */
+	flex-wrap: wrap; /* go to next line if space runs out */
+	gap: 40px; /* space between tiles */
+	margin-top: 30px; /* spacing above */
+}
+
+.tile {
+	width: 220px; /* fixed width */
+	height: 220px; /* fixed height */
+	background-color: #ffffff; /* white box */
+	border-radius: 15px; /* rounded corners */
+	box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* soft shadow */
+	overflow: hidden; /* clip content */
+	transition: transform 0.3s, box-shadow 0.3s; /* smooth animation */
+	text-align: center; /* center content */
+	text-decoration: none; /* no underline */
+	color: #333; /* dark text */
+}
+
+.tile img {
+	width: 100%; /* fill tile width */
+	height: 120px; /* fixed image height */
+	object-fit: cover; /* crop image nicely */
+}
+
+.tile h3 {
+	padding: 10px; /* space around heading */
+	font-size: 18px; /* heading size */
+}
+
+.tile:hover {
+	transform: scale(1.05); /* zoom effect */
+	box-shadow: 0 8px 16px rgba(0,0,0,0.3); /* stronger shadow */
+}
+
+/* go top button */
+.top {
+	position: fixed; /* stays in place */
+	bottom: 5%; /* near bottom */
+	right: 5%; /* near right */
+}
+	
+.top a {
+	padding: 10px 20px; /* button padding */
+	background-color: #09601e; /* dark green */
+	color: white; /* white text */
+	text-decoration: none; /* no underline */
+	border-radius: 20px; /* pill shape */
+	font-size: 12px; /* small font */
+	font-weight: bold; /* bold text */
+}
+
+.top a:hover {
+	background-color: #0056b3; /* blue on hover */
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* hover shadow */
+}
